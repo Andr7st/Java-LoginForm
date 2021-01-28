@@ -1,0 +1,54 @@
+https://www.seekpng.com/idown/u2w7y3u2e6t4y3t4_majin-vegeta-by-koku78-majin-vegeta-ssj2-png/
+
+
+
+
+
+
+
+
+            /*
+            
+            JLabel ImagenFondo = new JLabel();
+            ImagenFondo.setIcon(icono1);
+            ImagenFondo.setSize(VENTANA_ANCHO, VENTANA_ALTO);
+            
+            // ImagenFondo.setVerticalAlignment(JLabel.BOTTOM);
+            // ImagenFondo.setHorizontalAlignment(JLabel.CENTER);
+         //   ImagenFondo.setBounds(0, 0, VENTANA_ANCHO, VENTANA_ALTO);
+
+         //this.setLayout(null);
+         
+         
+         
+         // Anadir otro panel encima para los campos de login
+         JPanel panelLogin = new JPanel();
+
+            
+            
+            
+            
+            JPasswordField pw = new JPasswordField();
+            pw.setBounds(10, 10, 70, 32); 
+            
+            panelLogin.add(pw);
+            
+            
+            
+            
+            this.add(panelLogin);
+            */
+            
+            
+            this.setBackground(COLOR_1);
+            this.setLayout(null);
+            // this.add(ImagenFondo);
+             
+            JPanel p = new JPanel();
+            p.setBackground(new Color(222,222,222));
+            p.setBounds(0, 100, 200, 140);
+            
+            this.add(p); 
+
+
+
