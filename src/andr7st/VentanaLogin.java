@@ -113,7 +113,7 @@ public class VentanaLogin extends JFrame {
                     //String nombreusuario = campoUsername.getText();
                     //String contrasena = campoPassword.getPassword().toString();
 
-                    System.out.println("Se ha presionado");
+                  //  System.out.println("Se ha presionado");
                  
 
                 }
