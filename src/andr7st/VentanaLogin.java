@@ -4,14 +4,12 @@ package andr7st;
  * 
  * Ejercicio: Crear una ventana de login
  */
-
-
 import javax.swing.*;
 import javax.swing.ImageIcon;
 import java.awt.Graphics;
 import java.awt.Color;
-//import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.event.*;
 
 public class VentanaLogin extends JFrame {
 
@@ -19,11 +17,11 @@ public class VentanaLogin extends JFrame {
      *
      */
     private static final long serialVersionUID = 9155571621262263447L;
+    
+    public ImageIcon iconoVentana = new ImageIcon("img/icono.png");
 
     private final int VENTANA_ALTO = 620;
-    private final int VENTANA_ANCHO = 400;
-    public ImageIcon icono = new ImageIcon("img/icono.png");
-    public ImageIcon IMAGEN = new ImageIcon("img/LoginIcon.png"); 
+    private final int VENTANA_ANCHO = 360;
 
     public final Color COLOR_1 = new Color(45,45,45); //(124, 45, 82);
     public final Color COLOR_2 = new Color(240,240,240);
@@ -35,94 +33,119 @@ public class VentanaLogin extends JFrame {
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
-        this.setIconImage(icono.getImage());
-        //this.getContentPane().setBackground(COLOR_1);
-        this.add(new LaminaPrincipal());
+        this.setIconImage(iconoVentana.getImage());
+        this.add(new PanelPrincipal());
         this.setVisible(true);
-
+        
+        //this.getContentPane().setBackground(COLOR_1);
     }
 
-    public class LaminaPrincipal extends JPanel { private static final long serialVersionUID = 1L;
+    public class PanelPrincipal extends JPanel { private static final long serialVersionUID = 1L;
 
-        public LaminaPrincipal() {
+        public PanelPrincipal() {
 
             this.setBackground(COLOR_1);
             this.setLayout(null);
-            this.add(new LaminaImagen());
-            this.add(new LaminaLogin());
+            this.add(new PanelImagen());
+            this.add(new PanelLogin());
 
         }
 
-        public class LaminaLogin extends JPanel { private static final long serialVersionUID = 1L;
+        public class PanelLogin extends JPanel { private static final long serialVersionUID = 1L;
 
-            int CAMPO_ANCHO = 200;
-            int CAMPO_ALTO  = 24;
+            //// Coordenadas y tamaño de este panel.
+            private final int PANEL_LOGIN_ANCHO = 300; 
+            private final int PANEL_LOGIN_ALTO = 240;
+            private final int PANEL_LOGIN_POSICION_X = 20; 
+            private final int PANEL_LOGIN_POSICION_Y = 260;
 
+            //// labels alto y ancho.
+            private int labelW = 200;
+            private int labelH  = 24;
+            
+            //// Campos de usuario y contraseña. Para accederlos con eventListener.
             public JTextField campoUsername;
             public JPasswordField campoPassword;
 
-            public LaminaLogin() {
+            public PanelLogin() {
 
-                // Campo de texto y label para nombre de usuario:
+                ///// Campo de texto y label para nombre de usuario:
                 JLabel labelUsername = new JLabel("Usuario:");
                 labelUsername.setForeground(COLOR_2);
-                labelUsername.setBounds(50, 20, CAMPO_ANCHO, CAMPO_ALTO);
+                labelUsername.setBounds(50, 20, labelW, labelH);
                 
                 campoUsername = new JTextField("Username");
-                campoUsername.setBounds(50, 50, CAMPO_ANCHO, CAMPO_ALTO);
+                campoUsername.setBounds(50, 50, labelW, labelH);
                 
-                // Campo de texto y label para nombre de contraseña:
+                ///// Campo de texto y label para nombre de contraseña:
                 JLabel labelPassword = new JLabel("contraseña:");
-                labelPassword.setBounds(50, 90, CAMPO_ANCHO, CAMPO_ALTO);
+                labelPassword.setBounds(50, 90, labelW, labelH);
                 labelPassword.setForeground(COLOR_2);
 
                 campoPassword = new JPasswordField("************");
-                campoPassword.setBounds(50, 120, CAMPO_ANCHO, CAMPO_ALTO);
+                campoPassword.setBounds(50, 120, labelW, labelH);
 
 
-                JButton boton = new JButton("Ingresar");
-                boton.setBounds(50, 174, CAMPO_ANCHO, 28);
+                JButton botonLogin = new JButton("Ingresar");
+                botonLogin.setBounds(50, 174, labelW, 28);
+                botonLogin.addActionListener(new AccionBotonLogin());
+
 
 
                 ////////////////////////////////////////////////////////////////////
                 this.setBackground(COLOR_1);
-                this.setBounds(50, 260, 300, 240);
+                this.setBounds(PANEL_LOGIN_POSICION_X, PANEL_LOGIN_POSICION_Y, PANEL_LOGIN_ANCHO, PANEL_LOGIN_ALTO);
                 this.setLayout(null);
 
                 this.add(labelUsername);
                 this.add(campoUsername);
                 this.add(labelPassword);
                 this.add(campoPassword);
-                this.add(boton);
+                this.add(botonLogin);
+            }
+
+            public class AccionBotonLogin implements ActionListener {
+
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    
+                    
+                    //String nombreusuario = campoUsername.getText();
+                    //String contrasena = campoPassword.getPassword().toString();
+
+                    System.out.println("Se ha presionado");
+                 
+
+                }
             }
 
         }
 
-        public class LaminaImagen extends JPanel { private static final long serialVersionUID = 1L;
+        public class PanelImagen extends JPanel { private static final long serialVersionUID = 1L;
 
             /// Aquí sólo se dibuja el icono de login
             // https://www.clipartkey.com/view/TbJihh_user-icon-login-logo/
+            private ImageIcon RECURSO_IMAGEN = new ImageIcon("img/LoginIcon.png");
 
-            public LaminaImagen() {
+            //// Coordenadas y tamaño de este panel
+            private final int PANEL_IMAGEN_ANCHO      = 160;
+            private final int PANEL_IMAGEN_ALTO       = 180;
+            private final int PANEL_IMAGEN_POSICION_X =  80;
+            private final int PANEL_IMAGEN_POSICION_Y =  40;
 
-                int ancho = 160;
-                int alto = 180;
-                int posicionX = 120;
-                int posicionY = 40;
-                //
-                // this.setBackground(Color.YELLOW);
-                this.setBounds(posicionX, posicionY, ancho, alto);
+            public PanelImagen() {
+
+                this.setBackground(Color.YELLOW);
+                this.setBounds(PANEL_IMAGEN_POSICION_X, PANEL_IMAGEN_POSICION_Y, PANEL_IMAGEN_ANCHO, PANEL_IMAGEN_ALTO);
             }
     
             public void paint(Graphics g) {
                 
-                Dimension DIMENSION = getSize();
-                g.drawImage(IMAGEN.getImage(), 0, 0, DIMENSION.width, DIMENSION.height, null);
+                Dimension dimensionPanelImagen = getSize();
+                g.drawImage(RECURSO_IMAGEN.getImage(), 0, 0, dimensionPanelImagen.width, dimensionPanelImagen.height, null);
                 setOpaque(false);
                 super.paintComponent(g);
             }
-            
         }
-
     }  
 }
