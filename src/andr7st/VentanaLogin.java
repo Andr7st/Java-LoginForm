@@ -1,6 +1,6 @@
 package andr7st;
 /**
- * @author Andrés Segura
+ * @author Andrés Segura.
  * 
  * Ejercicio: Crear una ventana de login
  */
@@ -53,6 +53,10 @@ public class VentanaLogin extends JFrame {
 
         public class PanelLogin extends JPanel { private static final long serialVersionUID = 1L;
 
+            //// Prueva: Nombre de usuario y contraseña exterados.
+            private String expectedUserName = "Andr7st";
+            private String expectedUserPass = "Andres";
+
             //// Coordenadas y tamaño de este panel.
             private final int PANEL_LOGIN_ANCHO = 300; 
             private final int PANEL_LOGIN_ALTO = 240;
@@ -66,6 +70,7 @@ public class VentanaLogin extends JFrame {
             //// Campos de usuario y contraseña. Para accederlos con eventListener.
             public JTextField campoUsername;
             public JPasswordField campoPassword;
+            public JButton botonLogin;
 
             public PanelLogin() {
 
@@ -74,7 +79,7 @@ public class VentanaLogin extends JFrame {
                 labelUsername.setForeground(COLOR_2);
                 labelUsername.setBounds(50, 20, labelW, labelH);
                 
-                campoUsername = new JTextField("Username");
+                campoUsername = new JTextField();
                 campoUsername.setBounds(50, 50, labelW, labelH);
                 
                 ///// Campo de texto y label para nombre de contraseña:
@@ -82,11 +87,11 @@ public class VentanaLogin extends JFrame {
                 labelPassword.setBounds(50, 90, labelW, labelH);
                 labelPassword.setForeground(COLOR_2);
 
-                campoPassword = new JPasswordField("************");
+                campoPassword = new JPasswordField();
                 campoPassword.setBounds(50, 120, labelW, labelH);
 
 
-                JButton botonLogin = new JButton("Ingresar");
+                botonLogin = new JButton("Ingresar");
                 botonLogin.setBounds(50, 174, labelW, 28);
                 botonLogin.addActionListener(new AccionBotonLogin());
 
@@ -109,16 +114,28 @@ public class VentanaLogin extends JFrame {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     
-                    
-                    //String nombreusuario = campoUsername.getText();
-                    //String contrasena = campoPassword.getPassword().toString();
+                    String userName = campoUsername.getText();
+                    String userPass = String.valueOf(campoPassword.getPassword());
 
-                  //  System.out.println("Se ha presionado");
-                 
+                    // if(userName.equals(expectedUserName) && userPass.equals(expectedUserPass)){
+                    if (userName.equalsIgnoreCase(expectedUserName) && userPass.equalsIgnoreCase(expectedUserPass)) {
+                        
+                        campoUsername.setBackground(new Color(116, 61, 150));
+                        campoPassword.setBackground(new Color(116, 61, 150));
+                        botonLogin.setEnabled(false);
+                        
+                        JOptionPane.showMessageDialog(null, "Cuenta autenticada ! ! !");
+
+
+                        botonLogin.setEnabled(!false);
+                        campoUsername.setBackground(new Color(255, 255, 255));
+                        campoPassword.setBackground(new Color(255, 255, 255));
+                        campoUsername.setText("");
+                        campoPassword.setText("");
+                    }
 
                 }
             }
-
         }
 
         public class PanelImagen extends JPanel { private static final long serialVersionUID = 1L;
