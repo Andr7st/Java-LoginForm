@@ -21,14 +21,14 @@ style=" width:300px ; height:96px "
 
 <br>
 
-**prueva:**
+**prueba:**
 usuario: **Andr7st** 
 contraseña: **Andres**
 
 <a href="out/demo/demo_JF-E06.zip" download> **Download** </a> executable.
 
 
-login logo: https://www.clipartkey.com/view/TbJihh_user-icon-login-logo/
+**login logo:** [clipartkey.com](https://www.clipartkey.com/view/TbJihh_user-icon-login-logo/)
 
 ---
 
