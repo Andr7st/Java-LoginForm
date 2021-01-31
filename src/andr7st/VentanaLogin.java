@@ -59,8 +59,8 @@ public class VentanaLogin extends JFrame {
 
             //// Coordenadas y tamaño de este panel.
             private final int PANEL_LOGIN_ANCHO = 300; 
-            private final int PANEL_LOGIN_ALTO = 240;
-            private final int PANEL_LOGIN_POSICION_X = 20; 
+            private final int PANEL_LOGIN_ALTO  = 240;
+            private final int PANEL_LOGIN_POSICION_X =  30; 
             private final int PANEL_LOGIN_POSICION_Y = 260;
 
             //// labels alto y ancho.
@@ -147,7 +147,7 @@ public class VentanaLogin extends JFrame {
             //// Coordenadas y tamaño de este panel
             private final int PANEL_IMAGEN_ANCHO      = 160;
             private final int PANEL_IMAGEN_ALTO       = 180;
-            private final int PANEL_IMAGEN_POSICION_X =  80;
+            private final int PANEL_IMAGEN_POSICION_X = 100;
             private final int PANEL_IMAGEN_POSICION_Y =  40;
 
             public PanelImagen() {
