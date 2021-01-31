@@ -21,9 +21,9 @@ style=" width:300px ; height:96px "
 
 <br>
 
-para hacer la prueva: <br>
-usuario:.......... **Andr7st** <br>
-contraseña:.. **Andres**
+**prueva:**
+usuario: **Andr7st** 
+contraseña: **Andres**
 
 <a href="out/demo/demo_JF-E06.zip" download> **Download** </a> executable.
 
