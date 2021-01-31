@@ -19,6 +19,11 @@ style=" width:300px ; height:96px "
 <img src="out/images/JF_E06_A.png"  />
 </div>
 
+<br>
+
+para hacer la prueva: <br>
+usuario:.......... **Andr7st** <br>
+contraseña:.. **Andres**
 
 <a href="out/demo/demo_JF-E06.zip" download> **Download** </a> executable.
 
