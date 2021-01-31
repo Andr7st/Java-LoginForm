@@ -6,6 +6,10 @@
 
 **EJERCICIO:** Creando ventana de login.
 
+**prueba:**
+usuario: **Andr7st** 
+contraseña: **Andres**
+
 <!-- Download [**Demo**](demo/Demo.zip)
 
 ![imagen](out/images/JF_E06_A.png)
@@ -20,10 +24,6 @@ style=" width:300px ; height:96px "
 </div>
 
 <br>
-
-**prueba:**
-usuario: **Andr7st** 
-contraseña: **Andres**
 
 <a href="out/demo/demo_JF-E06.zip" download> **Download** </a> executable.
 
