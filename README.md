@@ -13,6 +13,11 @@
 
 <!-- Download [**Demo**](demo/Demo.zip) -->
 
+
+![imagen](out/images/JF_E06_A.png)
+
+
+
 <a href="out/demo/Demo_JF-E06.zip" download> **Download demo** </a>
 
 ---
