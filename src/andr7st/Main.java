@@ -9,7 +9,7 @@ public class Main {
         
         EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new andr7st.forms.login.Login().setVisible(true);;
+                new andr7st.forms.login.FrameLogin().setVisible(true);;
             }
         });
     }
