@@ -1,4 +1,4 @@
-### Java-LoginForm
+### Java-LoginForm | **JF-E06**
 
 ![icon](https://raw.github.com/Andr7st/index/main/src/images/icons/java_x32.png)
 ![icon](https://raw.github.com/Andr7st/index/main/src/images/icons/sqlsearch0_x32.png)
@@ -33,7 +33,4 @@ style=" width:300px ; height:96px "
 **login logo:** [clipartkey.com](https://www.clipartkey.com/view/TbJihh_user-icon-login-logo/)
 
 ---
-
-Repository ID: **JF-E06**
-
 [**Andr7st/index**](https://github.com/Andr7st/index/)
