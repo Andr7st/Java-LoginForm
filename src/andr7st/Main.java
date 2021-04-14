@@ -10,7 +10,7 @@ public class Main {
     
     public static void main(String... Str) {
         
-        new VentanaLogin();
+        new andr7st.VentanaLogin();
 
     }
 }
