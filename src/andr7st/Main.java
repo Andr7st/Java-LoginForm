@@ -1,16 +1,16 @@
 package andr7st;
 /**
  * @author Andrés Segura.
- * 
- * Por comodidad, siempre pongo un archivo llamado "Main.java" con el método 'main'.
- * 
  */
+import java.awt.EventQueue;
 
 public class Main {
-    
     public static void main(String... Str) {
         
-        new andr7st.VentanaLogin();
-
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new andr7st.forms.login.Login().setVisible(true);;
+            }
+        });
     }
 }

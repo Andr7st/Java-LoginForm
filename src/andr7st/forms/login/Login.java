@@ -1,4 +1,4 @@
-package andr7st;
+package andr7st.forms.login;
 /**
  * @author Andrés Segura.
  * 
@@ -11,7 +11,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.*;
 
-public class VentanaLogin extends JFrame {
+public class Login extends JFrame {
 
     /**
      *
@@ -26,7 +26,7 @@ public class VentanaLogin extends JFrame {
     public final Color COLOR_1 = new Color(45,45,45); //(124, 45, 82);
     public final Color COLOR_2 = new Color(240,240,240);
 
-    public VentanaLogin() {
+    public Login() {
 
         this.setTitle("Login | Andr7st");
         this.setSize(VENTANA_ANCHO, VENTANA_ALTO);
@@ -35,7 +35,7 @@ public class VentanaLogin extends JFrame {
         this.setResizable(false);
         this.setIconImage(iconoVentana.getImage());
         this.add(new PanelPrincipal());
-        this.setVisible(true);
+        //this.setVisible(true);
         
         //this.getContentPane().setBackground(COLOR_1);
     }
