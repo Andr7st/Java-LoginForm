@@ -9,12 +9,23 @@ public class ConectarDB {
     private String ConexionDatabaseHost;
     private String conexionDatabaseUsuario;
     private String conexionDatabaseContrasena;
-
     private String conexionDatabaseNombreDatabase;
 
+    // boolean esUsuario = false; // Si se encuentra el nombre de usuario en la bd = true. 
 
     String usuarioEvaluar;
     String contrasenaEvaluar;
+
+    public String getUsuario() {
+        return this.usuarioEvaluar;
+    }
+    public String getContrasena() {
+        return this.contrasenaEvaluar;
+    }
+
+/*     public boolean getEsUsuario() {
+        return this.esUsuario;
+    } */
 
     private Connection conexionSQL = null;
 
@@ -51,9 +62,8 @@ public class ConectarDB {
 
             while(resultset.next()) {
 
-                System.out.println(resultset.getInt   ("id"         ));
-                System.out.println(resultset.getString("usuario"     ));
-                System.out.println(resultset.getString("contrasena"     ));
+                this.usuarioEvaluar = resultset.getString("usuario");
+                this.contrasenaEvaluar = resultset.getString("contrasena");
         
             }
             
@@ -96,7 +106,7 @@ public class ConectarDB {
         this.conexionDatabaseUsuario    = postgreSQL.getUsuario();
         this.conexionDatabaseContrasena = postgreSQL.getContrasena();
         this.ConexionDatabaseHost       = postgreSQL.getHost();
-
         this.conexionDatabaseNombreDatabase = postgreSQL.getDatabaseName();
+
     }
 }
